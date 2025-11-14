@@ -123,46 +123,38 @@ Setiap aktivitas — mulai dari manajemen user, pembuatan kode presensi, hingga 
 ### 5. Use Case: Delete User
 
 **Aktor:** Admin  
-
 **Deskripsi:** Admin menghapus akun user.  
-
 **Precondition:** Admin sudah login.  
-
 **Trigger:** Admin memilih hapus pada data user.  
-
 **Alur Utama:**  
 1. Admin mengonfirmasi penghapusan.
 2. Sistem menghapus data dari database.  
    Postcondition: Data user terhapus.  
    Exception: Admin membatalkan penghapusan.
+   
+###6. Use Case: Create Kode Presensi
 
-6. Use Case: Create Kode Presensi
+**Aktor:** Admin  
+**Deskripsi:** Membuat kode presensi yang dipakai user untuk absen.  
+**Precondition:** Admin sudah login.  
+**Trigger:** Admin memilih menu kode presensi.   
+**Alur Utama: **  
+  1. Admin memasukkan kode & informasi pendukung.  
+  2. Sistem memvalidasi dan menyimpan.  
+     Postcondition: Kode presensi aktif dan tersimpan.  
+     Exception: Kode sudah digunakan sebelumnya.  
 
-Aktor: Admin
-Deskripsi: Membuat kode presensi yang dipakai user untuk absen.
-Precondition: Admin sudah login.
-Trigger: Admin memilih menu kode presensi.
-Alur Utama:
+### 7. Use Case: Read / Update / Delete Kode Presensi
 
-Admin memasukkan kode & informasi pendukung.
-
-Sistem memvalidasi dan menyimpan.
-Postcondition: Kode presensi aktif dan tersimpan.
-Exception: Kode sudah digunakan sebelumnya.
-
-7. Use Case: Read / Update / Delete Kode Presensi
-
-Aktor: Admin
-Deskripsi: Mengelola data kode presensi.
-Precondition: Admin sudah login.
-Trigger: Admin membuka halaman kode presensi.
-Alur Utama:
-
-Sistem menampilkan daftar kode presensi.
-
-Admin dapat mengedit atau menghapus data.
-Postcondition: Data presensi berubah sesuai tindakan Admin.
-Exception: Kode tidak ditemukan atau konflik data.
+**Aktor:** Admin  
+**Deskripsi:** Mengelola data kode presensi.  
+**Precondition:** Admin sudah login.  
+**Trigger:** Admin membuka halaman kode presensi.  
+**Alur Utama:**  
+  1. Sistem menampilkan daftar kode presensi.
+  2. Admin dapat mengedit atau menghapus data.  
+     Postcondition: Data presensi berubah sesuai tindakan Admin.  
+     Exception: Kode tidak ditemukan atau konflik data.
 
 8. Use Case: Read & Search Riwayat Login
 
