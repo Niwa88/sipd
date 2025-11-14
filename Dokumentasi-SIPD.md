@@ -104,7 +104,7 @@ Setiap aktivitas — mulai dari manajemen user, pembuatan kode presensi, hingga 
 1. Sistem menampilkan seluruh user.
 2. Admin memasukkan kata kunci.  
 3. Sistem menampilkan hasil pencarian.  
-   **Postcondition:** Data user tampil sesuai filter.
+   **Postcondition:** Data user tampil sesuai filter.  
    **Exception:** Data tidak ditemukan → tampil pesan "tidak ada hasil".
 
 ### 4. Use Case: Update User
@@ -158,48 +158,41 @@ Setiap aktivitas — mulai dari manajemen user, pembuatan kode presensi, hingga 
 
 8. Use Case: Read & Search Riwayat Login
 
-Aktor: Admin
-Deskripsi: Admin melihat riwayat login semua user.
-Precondition: Admin sudah login.
-Trigger: Admin membuka menu riwayat login.
-Alur Utama:
-
-Sistem menampilkan riwayat login.
-
-Admin dapat memfilter berdasarkan user/tanggal.
-Postcondition: Riwayat login tampil sesuai filter.
-Exception: Data tidak ditemukan.
+**Aktor:** Admin  
+**Deskripsi:** Admin melihat riwayat login semua user.  
+**Precondition:** Admin sudah login.  
+**Trigger:** Admin membuka menu riwayat login.  
+**Alur Utama:**  
+  1. Sistem menampilkan riwayat login.
+  2. Admin dapat memfilter berdasarkan user/tanggal.
+     **Postcondition:** Riwayat login tampil sesuai filter.  
+     **Exception:** Data tidak ditemukan.
 
 USE CASE UNTUK USER
-9. Use Case: Login User
+### 9. Use Case: Login User
 
-Aktor: User
-Deskripsi: User masuk ke sistem untuk melakukan presensi.
-Precondition: User memiliki akun.
-Trigger: User membuka halaman login.
-Alur Utama:
+**Aktor:** User  
+**Deskripsi:** User masuk ke sistem untuk melakukan presensi.  
+**Precondition:** User memiliki akun.  
+**Trigger:** User membuka halaman login.  
+**Alur Utama:**  
+  1. User memasukkan email & password.
+  2. Sistem memvalidasi dan mengarahkan ke dashboard.  
+     **Postcondition:** User berhasil masuk.  
+     **Exception:** Password salah / akun tidak ada.
 
-User memasukkan email & password.
+### 10. Use Case: Melakukan Presensi
 
-Sistem memvalidasi dan mengarahkan ke dashboard.
-Postcondition: User berhasil masuk.
-Exception: Password salah / akun tidak ada.
-
-10. Use Case: Melakukan Presensi
-
-Aktor: User
-Deskripsi: User melakukan presensi menggunakan kode yang disediakan Admin.
-Precondition: User login dan kode presensi aktif.
-Trigger: User membuka menu presensi.
-Alur Utama:
-
-User memasukkan kode presensi.
-
-Sistem memeriksa kevalidan kode.
-
-Sistem mencatat presensi ke database.
-Postcondition: Presensi tersimpan.
-Exception: Kode tidak valid / sudah kadaluarsa.
+**Aktor:** User  
+**Deskripsi:** User melakukan presensi menggunakan kode yang disediakan Admin.  
+**Precondition:** User login dan kode presensi aktif.  
+**Trigger:** User membuka menu presensi.  
+**Alur Utama:**  
+  1. User memasukkan kode presensi.
+  2. Sistem memeriksa kevalidan kode.
+  3. Sistem mencatat presensi ke database.  
+     Postcondition: Presensi tersimpan.  
+     Exception: Kode tidak valid / sudah kadaluarsa.
 
 11. Use Case: Melihat Riwayat Presensi
 
